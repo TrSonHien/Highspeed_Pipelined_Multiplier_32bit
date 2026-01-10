@@ -1,0 +1,27 @@
+{
+    "DESIGN_NAME": "pipelined_mult",
+    "VERILOG_FILES": ["dir::src/ba_pipelined.v"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    
+    "PNR_SDC_FILE": "dir::src/pnr.sdc",
+    "SIGNOFF_SDC_FILE": "dir::src/signoff.sdc",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+
+    "GRT_REPAIR_ANTENNAS": true,
+    "GRT_ANTENNA_ITERS": 10,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "DIODE_INSERTION_STRATEGY": 3,
+
+    "FP_CORE_UTIL": 65,
+    "PL_TARGET_DENSITY_PCT": 70,
+    "//PL_RESIZER_ALLOW_SETUP_VIOS": true,
+
+    "FP_PDN_VPITCH": 50,
+    "FP_PDN_HPITCH": 50,
+
+    "SYNTH_STRATEGY": "DELAY 2",
+    "MAX_FANOUT_CONSTRAINT": 6,
+
+    "CTS_CLK_BUFFER_LIST": ["sky130_fd_sc_hd__clkbuf_4", "sky130_fd_sc_hd__clkbuf_8"]
+}

@@ -1,0 +1,841 @@
+
+Magic 8.3 revision 489 - Compiled on Thu Aug 22 13:45:15 UTC 2024.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/nix/store/h0ldzjka94yryiq8yxbxmwargpnmwhx6-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/magic/wrapper.tcl" from command line.
+> lef read /home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+Reading LEF data from file /home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+> gds read /home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: sky130_fd_sc_hd
+Reading "sky130_fd_sc_hd__or4bb_4".
+Reading "sky130_fd_sc_hd__probe_p_8".
+Reading "sky130_fd_sc_hd__probec_p_8".
+Reading "sky130_fd_sc_hd__sdfbbn_1".
+Reading "sky130_fd_sc_hd__sdfsbp_2".
+Reading "sky130_fd_sc_hd__sdfsbp_1".
+Reading "sky130_fd_sc_hd__sdfrtp_4".
+Reading "sky130_fd_sc_hd__sdfrtp_2".
+Reading "sky130_fd_sc_hd__sdfrtp_1".
+Reading "sky130_fd_sc_hd__sdfrtn_1".
+Reading "sky130_fd_sc_hd__sdfrbp_2".
+Reading "sky130_fd_sc_hd__sdfrbp_1".
+Reading "sky130_fd_sc_hd__sdfbbp_1".
+Reading "sky130_fd_sc_hd__sdfbbn_2".
+Reading "sky130_fd_sc_hd__sdfstp_1".
+Reading "sky130_fd_sc_hd__sdfstp_2".
+Reading "sky130_fd_sc_hd__sdfstp_4".
+Reading "sky130_fd_sc_hd__sdfxbp_1".
+Reading "sky130_fd_sc_hd__sdfxbp_2".
+Reading "sky130_fd_sc_hd__sdfxtp_1".
+Reading "sky130_fd_sc_hd__sdfxtp_2".
+Reading "sky130_fd_sc_hd__sdfxtp_4".
+Reading "sky130_fd_sc_hd__sdlclkp_1".
+Reading "sky130_fd_sc_hd__sdlclkp_2".
+Reading "sky130_fd_sc_hd__sdlclkp_4".
+Reading "sky130_fd_sc_hd__sedfxbp_1".
+Reading "sky130_fd_sc_hd__sedfxbp_2".
+Reading "sky130_fd_sc_hd__sedfxtp_1".
+Reading "sky130_fd_sc_hd__sedfxtp_2".
+Reading "sky130_fd_sc_hd__sedfxtp_4".
+Reading "sky130_fd_sc_hd__tap_1".
+Reading "sky130_fd_sc_hd__tap_2".
+Reading "sky130_fd_sc_hd__xor2_1".
+Reading "sky130_fd_sc_hd__xnor3_4".
+Reading "sky130_fd_sc_hd__xnor3_2".
+Reading "sky130_fd_sc_hd__xnor3_1".
+Reading "sky130_fd_sc_hd__xnor2_4".
+Reading "sky130_fd_sc_hd__xnor2_2".
+Reading "sky130_fd_sc_hd__xnor2_1".
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hd__tapvgnd_1".
+Reading "sky130_fd_sc_hd__tapvgnd2_1".
+Reading "sky130_fd_sc_hd__xor2_2".
+Reading "sky130_fd_sc_hd__xor2_4".
+Reading "sky130_fd_sc_hd__xor3_1".
+Reading "sky130_fd_sc_hd__xor3_2".
+Reading "sky130_fd_sc_hd__xor3_4".
+Reading "sky130_fd_sc_hd__o41a_4".
+Reading "sky130_fd_sc_hd__o41ai_1".
+Reading "sky130_fd_sc_hd__o41ai_2".
+Reading "sky130_fd_sc_hd__o41ai_4".
+Reading "sky130_fd_sc_hd__o211a_1".
+Reading "sky130_fd_sc_hd__o211a_2".
+Reading "sky130_fd_sc_hd__o211a_4".
+Reading "sky130_fd_sc_hd__o211ai_1".
+Reading "sky130_fd_sc_hd__o211ai_2".
+Reading "sky130_fd_sc_hd__o211ai_4".
+Reading "sky130_fd_sc_hd__o221a_1".
+Reading "sky130_fd_sc_hd__o221a_2".
+Reading "sky130_fd_sc_hd__o221a_4".
+Reading "sky130_fd_sc_hd__o221ai_1".
+Reading "sky130_fd_sc_hd__o221ai_2".
+Reading "sky130_fd_sc_hd__o221ai_4".
+Reading "sky130_fd_sc_hd__o2111a_4".
+Reading "sky130_fd_sc_hd__o2111a_2".
+Reading "sky130_fd_sc_hd__o2111a_1".
+Reading "sky130_fd_sc_hd__o311ai_4".
+Reading "sky130_fd_sc_hd__o311ai_2".
+Reading "sky130_fd_sc_hd__o311ai_1".
+Reading "sky130_fd_sc_hd__o311ai_0".
+Reading "sky130_fd_sc_hd__o311a_4".
+Reading "sky130_fd_sc_hd__o311a_2".
+Reading "sky130_fd_sc_hd__o311a_1".
+Reading "sky130_fd_sc_hd__o2111ai_1".
+Reading "sky130_fd_sc_hd__o2111ai_2".
+Reading "sky130_fd_sc_hd__o2111ai_4".
+Reading "sky130_fd_sc_hd__or2_0".
+Reading "sky130_fd_sc_hd__or2_1".
+Reading "sky130_fd_sc_hd__or2_2".
+Reading "sky130_fd_sc_hd__or2_4".
+Reading "sky130_fd_sc_hd__or2b_1".
+Reading "sky130_fd_sc_hd__or2b_2".
+Reading "sky130_fd_sc_hd__or2b_4".
+Reading "sky130_fd_sc_hd__or3_1".
+Reading "sky130_fd_sc_hd__or3_2".
+Reading "sky130_fd_sc_hd__or3_4".
+Reading "sky130_fd_sc_hd__or3b_1".
+Reading "sky130_fd_sc_hd__or3b_2".
+Reading "sky130_fd_sc_hd__or3b_4".
+Reading "sky130_fd_sc_hd__or4_1".
+Reading "sky130_fd_sc_hd__or4_2".
+Reading "sky130_fd_sc_hd__or4_4".
+Reading "sky130_fd_sc_hd__or4b_1".
+Reading "sky130_fd_sc_hd__or4b_2".
+Reading "sky130_fd_sc_hd__or4b_4".
+Reading "sky130_fd_sc_hd__or4bb_1".
+Reading "sky130_fd_sc_hd__or4bb_2".
+Reading "sky130_fd_sc_hd__nor3b_2".
+Reading "sky130_fd_sc_hd__nor3b_4".
+Reading "sky130_fd_sc_hd__nor4_1".
+Reading "sky130_fd_sc_hd__nor4_2".
+Reading "sky130_fd_sc_hd__nor4_4".
+Reading "sky130_fd_sc_hd__nor4b_1".
+Reading "sky130_fd_sc_hd__nor4b_2".
+Reading "sky130_fd_sc_hd__nor4b_4".
+Reading "sky130_fd_sc_hd__nor4bb_1".
+Reading "sky130_fd_sc_hd__nor4bb_2".
+Reading "sky130_fd_sc_hd__nor4bb_4".
+Moving label "k" from mvpsubdiff to ndiff in cell sky130_fd_sc_hd__nor4bb_4.
+Reading "sky130_fd_sc_hd__o2bb2a_1".
+Reading "sky130_fd_sc_hd__o2bb2a_2".
+Reading "sky130_fd_sc_hd__o2bb2a_4".
+Reading "sky130_fd_sc_hd__o2bb2ai_1".
+Reading "sky130_fd_sc_hd__o2bb2ai_2".
+Reading "sky130_fd_sc_hd__o2bb2ai_4".
+Reading "sky130_fd_sc_hd__o21a_1".
+Reading "sky130_fd_sc_hd__o21a_2".
+Reading "sky130_fd_sc_hd__o21ai_2".
+Reading "sky130_fd_sc_hd__o21ai_1".
+Reading "sky130_fd_sc_hd__o21ai_0".
+Reading "sky130_fd_sc_hd__o21a_4".
+Reading "sky130_fd_sc_hd__o21ba_2".
+Reading "sky130_fd_sc_hd__o21ba_1".
+Reading "sky130_fd_sc_hd__o21ai_4".
+Reading "sky130_fd_sc_hd__o21bai_2".
+Reading "sky130_fd_sc_hd__o21bai_1".
+Reading "sky130_fd_sc_hd__o21ba_4".
+Reading "sky130_fd_sc_hd__o21bai_4".
+Reading "sky130_fd_sc_hd__o22a_1".
+Reading "sky130_fd_sc_hd__o22a_2".
+Reading "sky130_fd_sc_hd__o22a_4".
+Reading "sky130_fd_sc_hd__o22ai_1".
+Reading "sky130_fd_sc_hd__o22ai_2".
+Reading "sky130_fd_sc_hd__o22ai_4".
+Reading "sky130_fd_sc_hd__o31a_1".
+Reading "sky130_fd_sc_hd__o31a_2".
+Reading "sky130_fd_sc_hd__o31a_4".
+Reading "sky130_fd_sc_hd__o31ai_1".
+Reading "sky130_fd_sc_hd__o31ai_2".
+Reading "sky130_fd_sc_hd__o31ai_4".
+Reading "sky130_fd_sc_hd__o32a_1".
+Reading "sky130_fd_sc_hd__o32a_2".
+Reading "sky130_fd_sc_hd__o32a_4".
+Reading "sky130_fd_sc_hd__o32ai_1".
+Reading "sky130_fd_sc_hd__o32ai_2".
+Reading "sky130_fd_sc_hd__o32ai_4".
+Reading "sky130_fd_sc_hd__o41a_1".
+Reading "sky130_fd_sc_hd__o41a_2".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2".
+Reading "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4".
+Reading "sky130_fd_sc_hd__nor2_2".
+Reading "sky130_fd_sc_hd__nand2_2".
+Reading "sky130_fd_sc_hd__inv_2".
+Reading "sky130_fd_sc_hd__conb_1".
+Reading "sky130_fd_sc_hd__macro_sparecell".
+Reading "sky130_fd_sc_hd__maj3_1".
+Reading "sky130_fd_sc_hd__maj3_2".
+Reading "sky130_fd_sc_hd__maj3_4".
+Reading "sky130_fd_sc_hd__mux2_1".
+Reading "sky130_fd_sc_hd__mux2_2".
+Reading "sky130_fd_sc_hd__mux2_4".
+Reading "sky130_fd_sc_hd__mux2_8".
+Reading "sky130_fd_sc_hd__mux2i_1".
+Reading "sky130_fd_sc_hd__mux2i_2".
+Reading "sky130_fd_sc_hd__nand2_1".
+Reading "sky130_fd_sc_hd__nand2_4".
+Reading "sky130_fd_sc_hd__nand2_8".
+Reading "sky130_fd_sc_hd__nand2b_1".
+Reading "sky130_fd_sc_hd__mux2i_4".
+Reading "sky130_fd_sc_hd__mux4_1".
+Reading "sky130_fd_sc_hd__mux4_2".
+Reading "sky130_fd_sc_hd__mux4_4".
+Reading "sky130_fd_sc_hd__nand2b_2".
+Reading "sky130_fd_sc_hd__nand2b_4".
+Reading "sky130_fd_sc_hd__nand3_1".
+Reading "sky130_fd_sc_hd__nand3_2".
+Reading "sky130_fd_sc_hd__nand3_4".
+Reading "sky130_fd_sc_hd__nand3b_1".
+Reading "sky130_fd_sc_hd__nand3b_2".
+Reading "sky130_fd_sc_hd__nand3b_4".
+Reading "sky130_fd_sc_hd__nand4_1".
+Reading "sky130_fd_sc_hd__nand4_2".
+Reading "sky130_fd_sc_hd__nand4_4".
+Reading "sky130_fd_sc_hd__nand4b_1".
+Reading "sky130_fd_sc_hd__nand4b_2".
+Reading "sky130_fd_sc_hd__nand4b_4".
+Reading "sky130_fd_sc_hd__nand4bb_1".
+Reading "sky130_fd_sc_hd__nand4bb_2".
+Reading "sky130_fd_sc_hd__nand4bb_4".
+Reading "sky130_fd_sc_hd__nor2_1".
+Reading "sky130_fd_sc_hd__nor2_4".
+Reading "sky130_fd_sc_hd__nor2_8".
+Reading "sky130_fd_sc_hd__nor2b_1".
+Reading "sky130_fd_sc_hd__nor2b_2".
+Reading "sky130_fd_sc_hd__nor2b_4".
+Reading "sky130_fd_sc_hd__nor3_1".
+Reading "sky130_fd_sc_hd__nor3_2".
+Reading "sky130_fd_sc_hd__nor3_4".
+Reading "sky130_fd_sc_hd__nor3b_1".
+Reading "sky130_fd_sc_hd__einvp_1".
+Reading "sky130_fd_sc_hd__einvp_2".
+Reading "sky130_fd_sc_hd__einvp_4".
+Reading "sky130_fd_sc_hd__einvp_8".
+Reading "sky130_fd_sc_hd__fa_1".
+Reading "sky130_fd_sc_hd__fa_2".
+Reading "sky130_fd_sc_hd__fa_4".
+Reading "sky130_fd_sc_hd__fah_1".
+Reading "sky130_fd_sc_hd__fahcin_1".
+Reading "sky130_fd_sc_hd__fahcon_1".
+Reading "sky130_fd_sc_hd__fill_1".
+Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_4".
+Reading "sky130_fd_sc_hd__fill_8".
+Reading "sky130_fd_sc_hd__ha_1".
+Reading "sky130_fd_sc_hd__ha_2".
+Reading "sky130_fd_sc_hd__ha_4".
+Reading "sky130_fd_sc_hd__inv_1".
+Reading "sky130_fd_sc_hd__inv_16".
+Reading "sky130_fd_sc_hd__inv_12".
+Reading "sky130_fd_sc_hd__inv_8".
+Reading "sky130_fd_sc_hd__inv_6".
+Reading "sky130_fd_sc_hd__inv_4".
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_4".
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_2".
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_1".
+Reading "sky130_fd_sc_hd__lpflow_bleeder_1".
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_8".
+Reading "sky130_fd_sc_hd__lpflow_clkbufkapwr_16".
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_1".
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_2".
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_4".
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_8".
+Reading "sky130_fd_sc_hd__lpflow_clkinvkapwr_16".
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_3".
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_4".
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_6".
+Reading "sky130_fd_sc_hd__lpflow_inputiso0n_1".
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_12".
+Reading "sky130_fd_sc_hd__lpflow_decapkapwr_8".
+Reading "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+Reading "sky130_fd_sc_hd__lpflow_inputiso1p_1".
+Reading "sky130_fd_sc_hd__lpflow_inputiso1n_1".
+Reading "sky130_fd_sc_hd__lpflow_inputiso0p_1".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_4".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_2".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_1".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_8".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrc_16".
+Reading "sky130_fd_sc_hd__lpflow_isobufsrckapwr_16".
+Reading "sky130_fd_sc_hd__dfrtp_2".
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Reading "sky130_fd_sc_hd__dfsbp_1".
+Reading "sky130_fd_sc_hd__dfsbp_2".
+Reading "sky130_fd_sc_hd__dfstp_1".
+Reading "sky130_fd_sc_hd__dfstp_2".
+Reading "sky130_fd_sc_hd__dfstp_4".
+Reading "sky130_fd_sc_hd__dfxbp_1".
+Reading "sky130_fd_sc_hd__dfxbp_2".
+Reading "sky130_fd_sc_hd__dfxtp_1".
+Reading "sky130_fd_sc_hd__dfxtp_2".
+Reading "sky130_fd_sc_hd__dfxtp_4".
+Reading "sky130_fd_sc_hd__diode_2".
+Reading "sky130_fd_sc_hd__dlclkp_1".
+Reading "sky130_fd_sc_hd__dlclkp_2".
+Reading "sky130_fd_sc_hd__dlclkp_4".
+Reading "sky130_fd_sc_hd__dlrbn_1".
+Reading "sky130_fd_sc_hd__dlrbp_1".
+Reading "sky130_fd_sc_hd__dlrtn_1".
+Reading "sky130_fd_sc_hd__dlrtn_2".
+Reading "sky130_fd_sc_hd__dlrbn_2".
+Reading "sky130_fd_sc_hd__dlrbp_2".
+Reading "sky130_fd_sc_hd__dlrtn_4".
+Reading "sky130_fd_sc_hd__dlrtp_1".
+Reading "sky130_fd_sc_hd__dlrtp_2".
+Reading "sky130_fd_sc_hd__dlrtp_4".
+Reading "sky130_fd_sc_hd__dlxbn_1".
+Reading "sky130_fd_sc_hd__dlxbn_2".
+Reading "sky130_fd_sc_hd__dlxbp_1".
+Reading "sky130_fd_sc_hd__dlxtn_1".
+Reading "sky130_fd_sc_hd__dlxtn_2".
+Reading "sky130_fd_sc_hd__dlxtn_4".
+Reading "sky130_fd_sc_hd__dlxtp_1".
+Reading "sky130_fd_sc_hd__dlygate4sd1_1".
+Reading "sky130_fd_sc_hd__dlygate4sd2_1".
+Reading "sky130_fd_sc_hd__dlygate4sd3_1".
+Reading "sky130_fd_sc_hd__dlymetal6s2s_1".
+Reading "sky130_fd_sc_hd__dlymetal6s4s_1".
+Reading "sky130_fd_sc_hd__dlymetal6s6s_1".
+Reading "sky130_fd_sc_hd__ebufn_1".
+Reading "sky130_fd_sc_hd__ebufn_2".
+Reading "sky130_fd_sc_hd__ebufn_4".
+Reading "sky130_fd_sc_hd__einvn_0".
+Reading "sky130_fd_sc_hd__einvn_1".
+Reading "sky130_fd_sc_hd__einvn_2".
+Reading "sky130_fd_sc_hd__einvn_4".
+Reading "sky130_fd_sc_hd__ebufn_8".
+Reading "sky130_fd_sc_hd__edfxbp_1".
+Reading "sky130_fd_sc_hd__edfxtp_1".
+Reading "sky130_fd_sc_hd__einvn_8".
+Reading "sky130_fd_sc_hd__and4_4".
+Reading "sky130_fd_sc_hd__and4b_1".
+Reading "sky130_fd_sc_hd__and4b_2".
+Reading "sky130_fd_sc_hd__and4b_4".
+Reading "sky130_fd_sc_hd__and4bb_1".
+Reading "sky130_fd_sc_hd__and4bb_2".
+Reading "sky130_fd_sc_hd__and4bb_4".
+Reading "sky130_fd_sc_hd__buf_1".
+Reading "sky130_fd_sc_hd__buf_2".
+Reading "sky130_fd_sc_hd__buf_4".
+Reading "sky130_fd_sc_hd__buf_6".
+Reading "sky130_fd_sc_hd__buf_8".
+Reading "sky130_fd_sc_hd__buf_12".
+Reading "sky130_fd_sc_hd__buf_16".
+Reading "sky130_fd_sc_hd__bufbuf_8".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_1".
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Reading "sky130_fd_sc_hd__clkbuf_1".
+Reading "sky130_fd_sc_hd__bufinv_16".
+Reading "sky130_fd_sc_hd__bufinv_8".
+Reading "sky130_fd_sc_hd__bufbuf_16".
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_1".
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s25_1".
+Reading "sky130_fd_sc_hd__clkdlybuf4s25_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s50_1".
+Reading "sky130_fd_sc_hd__clkdlybuf4s50_2".
+Reading "sky130_fd_sc_hd__clkinv_1".
+Reading "sky130_fd_sc_hd__clkinv_2".
+Reading "sky130_fd_sc_hd__clkinv_4".
+Reading "sky130_fd_sc_hd__dfbbn_1".
+Reading "sky130_fd_sc_hd__decap_12".
+Reading "sky130_fd_sc_hd__decap_8".
+Reading "sky130_fd_sc_hd__decap_6".
+Reading "sky130_fd_sc_hd__decap_4".
+Reading "sky130_fd_sc_hd__decap_3".
+Reading "sky130_fd_sc_hd__clkinvlp_4".
+Reading "sky130_fd_sc_hd__clkinvlp_2".
+Reading "sky130_fd_sc_hd__clkinv_16".
+Reading "sky130_fd_sc_hd__clkinv_8".
+Reading "sky130_fd_sc_hd__dfbbn_2".
+Reading "sky130_fd_sc_hd__dfbbp_1".
+Reading "sky130_fd_sc_hd__dfrbp_1".
+Reading "sky130_fd_sc_hd__dfrbp_2".
+Reading "sky130_fd_sc_hd__dfrtn_1".
+Reading "sky130_fd_sc_hd__dfrtp_1".
+Reading "sky130_fd_sc_hd__a32oi_1".
+Reading "sky130_fd_sc_hd__a32oi_2".
+Reading "sky130_fd_sc_hd__a32oi_4".
+Reading "sky130_fd_sc_hd__a41o_1".
+Reading "sky130_fd_sc_hd__a41o_2".
+Reading "sky130_fd_sc_hd__a41o_4".
+Reading "sky130_fd_sc_hd__a41oi_1".
+Reading "sky130_fd_sc_hd__a41oi_2".
+Reading "sky130_fd_sc_hd__a41oi_4".
+Reading "sky130_fd_sc_hd__a221o_4".
+Reading "sky130_fd_sc_hd__a221o_2".
+Reading "sky130_fd_sc_hd__a221oi_1".
+Reading "sky130_fd_sc_hd__a211oi_2".
+Reading "sky130_fd_sc_hd__a211oi_1".
+Reading "sky130_fd_sc_hd__a211o_4".
+Reading "sky130_fd_sc_hd__a211o_2".
+Reading "sky130_fd_sc_hd__a211o_1".
+Reading "sky130_fd_sc_hd__a221o_1".
+Reading "sky130_fd_sc_hd__a211oi_4".
+Reading "sky130_fd_sc_hd__a221oi_2".
+Reading "sky130_fd_sc_hd__a221oi_4".
+Reading "sky130_fd_sc_hd__a222oi_1".
+Reading "sky130_fd_sc_hd__a311o_1".
+Reading "sky130_fd_sc_hd__a311o_2".
+Reading "sky130_fd_sc_hd__a311o_4".
+Reading "sky130_fd_sc_hd__a311oi_1".
+Reading "sky130_fd_sc_hd__a311oi_2".
+Reading "sky130_fd_sc_hd__a311oi_4".
+Reading "sky130_fd_sc_hd__a2111o_1".
+Reading "sky130_fd_sc_hd__a2111o_2".
+Reading "sky130_fd_sc_hd__a2111o_4".
+Reading "sky130_fd_sc_hd__a2111oi_0".
+Reading "sky130_fd_sc_hd__a2111oi_1".
+CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+Reading "sky130_fd_sc_hd__a2111oi_2".
+Reading "sky130_fd_sc_hd__a2111oi_4".
+Reading "sky130_fd_sc_hd__and2_0".
+Reading "sky130_fd_sc_hd__and2_1".
+Reading "sky130_fd_sc_hd__and2b_1".
+Reading "sky130_fd_sc_hd__and2_4".
+Reading "sky130_fd_sc_hd__and2_2".
+Reading "sky130_fd_sc_hd__and2b_4".
+Reading "sky130_fd_sc_hd__and2b_2".
+Reading "sky130_fd_sc_hd__and3_4".
+Reading "sky130_fd_sc_hd__and3_2".
+Reading "sky130_fd_sc_hd__and3_1".
+Reading "sky130_fd_sc_hd__and3b_2".
+Reading "sky130_fd_sc_hd__and3b_1".
+Reading "sky130_fd_sc_hd__and3b_4".
+Reading "sky130_fd_sc_hd__and4_1".
+Reading "sky130_fd_sc_hd__and4_2".
+Reading "sky130_ef_sc_hd__decap_12".
+Reading "sky130_ef_sc_hd__fill_4".
+Reading "sky130_ef_sc_hd__fill_8".
+Reading "sky130_ef_sc_hd__fill_12".
+Reading "sky130_fd_sc_hd__a2bb2o_1".
+Reading "sky130_fd_sc_hd__a2bb2o_2".
+Reading "sky130_fd_sc_hd__a2bb2o_4".
+Reading "sky130_fd_sc_hd__a2bb2oi_1".
+Reading "sky130_fd_sc_hd__a2bb2oi_2".
+Reading "sky130_fd_sc_hd__a2bb2oi_4".
+Reading "sky130_fd_sc_hd__a21bo_1".
+Reading "sky130_fd_sc_hd__a21bo_2".
+Reading "sky130_fd_sc_hd__a21bo_4".
+Reading "sky130_fd_sc_hd__a21boi_0".
+Reading "sky130_fd_sc_hd__a21boi_1".
+Reading "sky130_fd_sc_hd__a21boi_2".
+Reading "sky130_fd_sc_hd__a21boi_4".
+Reading "sky130_fd_sc_hd__a21o_1".
+Reading "sky130_fd_sc_hd__a21o_2".
+Reading "sky130_fd_sc_hd__a22o_1".
+Reading "sky130_fd_sc_hd__a21oi_4".
+Reading "sky130_fd_sc_hd__a21oi_2".
+Reading "sky130_fd_sc_hd__a22oi_2".
+Reading "sky130_fd_sc_hd__a22oi_1".
+Reading "sky130_fd_sc_hd__a22o_4".
+Reading "sky130_fd_sc_hd__a22o_2".
+Reading "sky130_fd_sc_hd__a22oi_4".
+Reading "sky130_fd_sc_hd__a21oi_1".
+Reading "sky130_fd_sc_hd__a21o_4".
+Reading "sky130_fd_sc_hd__a31o_1".
+Reading "sky130_fd_sc_hd__a31o_2".
+Reading "sky130_fd_sc_hd__a31o_4".
+Reading "sky130_fd_sc_hd__a31oi_1".
+Reading "sky130_fd_sc_hd__a31oi_2".
+Reading "sky130_fd_sc_hd__a31oi_4".
+Reading "sky130_fd_sc_hd__a32o_1".
+Reading "sky130_fd_sc_hd__a32o_2".
+Reading "sky130_fd_sc_hd__a32o_4".
+Cell (REFRESHLAYOUT?) couldn't be read
+No such file or directory
+Creating new cell
+> def read /home/hien/openlane2/designs/highspeed_pipelined_multiplier/runs/opti_1/52-odb-cellfrequencytables/pipelined_mult.def -noblockage -labels
+Reading DEF data from file /home/hien/openlane2/designs/highspeed_pipelined_multiplier/runs/opti_1/52-odb-cellfrequencytables/pipelined_mult.def.
+This action cannot be undone.
+  Processed 4 vias total.
+  Processed 22990 subcell instances total.
+  Processed 132 pins total.
+  Processed 2 special nets total.
+  Processed 12448 nets total.
+DEF read: Processed 247735 lines.
+Moving label "_00072_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00077_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00088_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00103_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00107_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00110_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00111_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00112_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00113_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00114_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00116_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00132_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00133_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00134_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00135_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00138_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00145_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00159_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00162_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00206_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00222_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00230_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00232_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00236_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00237_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00240_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00242_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00259_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00261_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00270_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00272_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00284_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00290_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00293_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00295_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00303_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00313_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00321_" from metal1 to viali in cell pipelined_mult.
+Moving label "_00325_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00330_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00333_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00337_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00372_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00375_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00377_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00392_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00399_" from metal1 to viali in cell pipelined_mult.
+Moving label "_00418_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00443_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_00445_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00467_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_00583_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_00607_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00613_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00667_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00862_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_00864_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_00979_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01021_" from metal1 to viali in cell pipelined_mult.
+Moving label "_01036_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01042_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01045_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01128_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01139_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01170_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01216_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01218_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01250_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01256_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_01277_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01315_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01319_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01413_" from metal1 to viali in cell pipelined_mult.
+Moving label "_01510_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01585_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01587_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01657_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01684_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01726_" from metal1 to viali in cell pipelined_mult.
+Moving label "_01756_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_01785_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01811_" from metal1 to viali in cell pipelined_mult.
+Moving label "_01827_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01855_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01879_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_01967_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_01969_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_02044_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02139_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02252_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_02286_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02408_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02465_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02473_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02528_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02546_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02548_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02579_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_02637_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_02640_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02656_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02737_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_02858_" from metal1 to viali in cell pipelined_mult.
+Moving label "_02873_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03029_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03068_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_03106_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03113_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_03121_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_03122_" from metal1 to viali in cell pipelined_mult.
+Moving label "_03143_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03333_" from metal1 to viali in cell pipelined_mult.
+Moving label "_03378_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03379_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_03398_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03420_" from metal1 to viali in cell pipelined_mult.
+Moving label "_03628_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_03722_" from metal1 to viali in cell pipelined_mult.
+Moving label "_03805_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_03830_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_03990_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04027_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04066_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04085_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_04093_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_04131_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_04152_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04214_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04238_" from metal1 to viali in cell pipelined_mult.
+Moving label "_04322_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04329_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_04355_" from metal1 to viali in cell pipelined_mult.
+Moving label "_04482_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04549_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04558_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04580_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_04596_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_04790_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_04923_" from metal1 to viali in cell pipelined_mult.
+Moving label "_04983_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05009_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05043_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05097_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05108_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05201_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05204_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05218_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05219_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05255_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05363_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05385_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05416_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05440_" from metal1 to viali in cell pipelined_mult.
+Moving label "_05573_" from metal1 to viali in cell pipelined_mult.
+Moving label "_05622_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05625_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05663_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05673_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_05733_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_05740_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05742_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05884_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_05888_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_05889_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_05890_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_06063_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_06216_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06308_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06401_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_06421_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_06443_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_06458_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_06581_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06625_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_06661_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06681_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06811_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_06812_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_06946_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_06999_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_07000_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_07029_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_07067_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_07182_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_07302_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_07460_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_07521_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_07587_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_07753_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_07810_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_07923_" from metal3 to via3 in cell pipelined_mult.
+Moving label "_07995_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_08038_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_08216_" from metal1 to viali in cell pipelined_mult.
+Moving label "_08241_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_08277_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_08336_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_08339_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_08367_" from metal1 to viali in cell pipelined_mult.
+Moving label "_08432_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_08489_" from metal1 to viali in cell pipelined_mult.
+Moving label "_08545_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_08553_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_08584_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_08741_" from metal1 to viali in cell pipelined_mult.
+Moving label "_08743_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_08886_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_09012_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_09014_" from metal1 to viali in cell pipelined_mult.
+Moving label "_09049_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09101_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09127_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09145_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_09150_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09195_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09206_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09250_" from metal1 to viali in cell pipelined_mult.
+Moving label "_09253_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09301_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09396_" from metal1 to viali in cell pipelined_mult.
+Moving label "_09449_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09475_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09480_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09495_" from metal1 to viali in cell pipelined_mult.
+Moving label "_09504_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09526_" from metal2 to via2 in cell pipelined_mult.
+Moving label "_09625_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09798_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09820_" from metal3 to via2 in cell pipelined_mult.
+Moving label "_09901_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_09902_" from metal1 to viali in cell pipelined_mult.
+Moving label "_09940_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_09989_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_10029_" from metal1 to viali in cell pipelined_mult.
+Moving label "_10045_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_10077_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_10101_" from metal1 to via1 in cell pipelined_mult.
+Moving label "_10103_" from metal2 to via1 in cell pipelined_mult.
+Moving label "_10178_" from metal2 to via2 in cell pipelined_mult.
+Moving label "b_h\[10\]" from metal3 to via3 in cell pipelined_mult.
+Moving label "b_h\[3\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "b_l\[0\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "clknet_3_3__leaf_clk" from metal3 to via2 in cell pipelined_mult.
+Moving label "clknet_3_6__leaf_clk" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1011" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1035" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1052" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1070" from metal1 to viali in cell pipelined_mult.
+Moving label "net1087" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1092" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1102" from metal3 to via3 in cell pipelined_mult.
+Moving label "net1104" from metal2 to via2 in cell pipelined_mult.
+Moving label "net117" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1206" from metal2 to via1 in cell pipelined_mult.
+Moving label "net1235" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1239" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1243" from metal1 to viali in cell pipelined_mult.
+Moving label "net1244" from metal3 to via3 in cell pipelined_mult.
+Moving label "net1252" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1303" from metal2 to via2 in cell pipelined_mult.
+Moving label "net134" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1347" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1353" from metal2 to via1 in cell pipelined_mult.
+Moving label "net136" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1364" from metal2 to via2 in cell pipelined_mult.
+Moving label "net138" from metal2 to via2 in cell pipelined_mult.
+Moving label "net14" from metal1 to viali in cell pipelined_mult.
+Moving label "net151" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1525" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1553" from metal1 to via1 in cell pipelined_mult.
+Moving label "net156" from metal2 to via1 in cell pipelined_mult.
+Moving label "net1562" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1568" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1569" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1578" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1586" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1587" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1589" from metal2 to via2 in cell pipelined_mult.
+Moving label "net160" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1617" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1654" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1667" from metal2 to via1 in cell pipelined_mult.
+Moving label "net1703" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1740" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1774" from metal1 to via1 in cell pipelined_mult.
+Moving label "net1776" from metal2 to via2 in cell pipelined_mult.
+Moving label "net1804" from metal1 to viali in cell pipelined_mult.
+Moving label "net237" from metal1 to viali in cell pipelined_mult.
+Moving label "net295" from metal1 to via1 in cell pipelined_mult.
+Moving label "net318" from metal2 to via2 in cell pipelined_mult.
+Moving label "net436" from metal1 to viali in cell pipelined_mult.
+Moving label "net442" from metal1 to via1 in cell pipelined_mult.
+Moving label "net499" from metal2 to via2 in cell pipelined_mult.
+Moving label "net520" from metal2 to via2 in cell pipelined_mult.
+Moving label "net567" from metal2 to via2 in cell pipelined_mult.
+Moving label "net595" from metal1 to via1 in cell pipelined_mult.
+Moving label "net612" from metal2 to via2 in cell pipelined_mult.
+Moving label "net618" from metal2 to via2 in cell pipelined_mult.
+Moving label "net623" from metal2 to via2 in cell pipelined_mult.
+Moving label "net743" from metal2 to via2 in cell pipelined_mult.
+Moving label "net781" from metal2 to via2 in cell pipelined_mult.
+Moving label "net793" from metal2 to via2 in cell pipelined_mult.
+Moving label "net807" from metal1 to via1 in cell pipelined_mult.
+Moving label "net824" from metal2 to via2 in cell pipelined_mult.
+Moving label "net828" from metal2 to via2 in cell pipelined_mult.
+Moving label "net829" from metal2 to via2 in cell pipelined_mult.
+Moving label "net835" from metal3 to via3 in cell pipelined_mult.
+Moving label "net853" from metal1 to via1 in cell pipelined_mult.
+Moving label "net899" from metal1 to via1 in cell pipelined_mult.
+Moving label "net957" from metal2 to via2 in cell pipelined_mult.
+Moving label "net970" from metal2 to via2 in cell pipelined_mult.
+Moving label "net971" from metal2 to via2 in cell pipelined_mult.
+Moving label "net984" from metal1 to via1 in cell pipelined_mult.
+Moving label "p[14]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p[16]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p[46]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p[4]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_hh\[29\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_hl\[23\]" from metal3 to via3 in cell pipelined_mult.
+Moving label "p_lh\[8\]" from metal1 to via1 in cell pipelined_mult.
+Moving label "p_ll\[18\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[12\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[16\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[17\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[21\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[25\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "p_ll_pipe\[29\]" from metal2 to via2 in cell pipelined_mult.
+Moving label "term_mid\[39\]" from metal2 to via1 in cell pipelined_mult.
+[INFO] Ignoring 'VPWR VGND'
+[INFO] Writing abstract LEF…
+[INFO] Not specifiying -pinonly (nets connected to pins on the same layer are declared as part of the pin)…
+Generating LEF output /home/hien/openlane2/designs/highspeed_pipelined_multiplier/runs/opti_1/58-magic-writelef/pipelined_mult.lef for cell pipelined_mult:
+Diagnostic:  Write LEF header for cell pipelined_mult
+Diagnostic:  Writing LEF output for cell pipelined_mult
+Diagnostic:  Scale value is 0.005000
+[INFO] LEF Write Complete.
+Using technology "sky130A", version 1.0.493-0-g0fe599b
