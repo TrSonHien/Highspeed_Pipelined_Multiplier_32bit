@@ -1,0 +1,32 @@
+if {[file exists ~/openlane2/my_script/script_matt.tcl]} {
+    source ~/openlane2/my_script/script_matt.tcl
+}
+Reading OpenROAD database at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/54-odb-cellfrequencytables/add3x64.odb'…
+Reading library file at '/home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/add64.sdc'…
+[INFO] Setting RC values…
+[INFO] Using voltage extracted from lib (1.8000000000V) for power nets and 0V for ground nets…
+%OL_CREATE_REPORT irdrop.rpt
+[INFO PSM-0040] All shapes on net VPWR are connected.
+########## IR report #################
+Net              : VPWR
+Corner           : nom_tt_025C_1v80
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 6.34e-05 V
+Worstcase IR drop: 4.25e-04 V
+Percentage drop  : 0.02 %
+######################################
+[INFO PSM-0040] All shapes on net VGND are connected.
+########## IR report #################
+Net              : VGND
+Corner           : nom_tt_025C_1v80
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 3.35e-04 V
+Average voltage  : 5.97e-05 V
+Average IR drop  : 5.97e-05 V
+Worstcase IR drop: 3.35e-04 V
+Percentage drop  : 0.02 %
+######################################
+%OL_END_REPORT

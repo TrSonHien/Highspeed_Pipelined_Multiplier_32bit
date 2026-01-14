@@ -1,0 +1,296 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+Startpoint: _1045_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: i_add (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     4    0.108277    0.224783    0.159243    0.159243 ^ clk (in)
+                                                         clk (net)
+                      0.225095    0.000000    0.159243 ^ clkbuf_regs_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     3    0.045870    0.052635    0.138387    0.297630 ^ clkbuf_regs_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         delaynet_0_clk (net)
+                      0.053042    0.002657    0.300287 ^ delaybuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     3    0.039052    0.044116    0.101156    0.401442 ^ delaybuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clk_regs (net)
+                      0.045108    0.005023    0.406465 ^ clkbuf_0_clk_regs/A (sky130_fd_sc_hd__clkbuf_16)
+    33    0.306873    0.245021    0.229373    0.635838 ^ clkbuf_0_clk_regs/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk_regs (net)
+                      0.246607    0.016077    0.651915 ^ clkbuf_4_8_0_clk_regs/A (sky130_fd_sc_hd__clkbuf_16)
+    27    0.082009    0.078524    0.161204    0.813119 ^ clkbuf_4_8_0_clk_regs/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_4_8_0_clk_regs (net)
+                      0.078666    0.002111    0.815230 ^ _1045_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.008232    0.034831    0.213006    1.028235 v _1045_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                         term_mid[18] (net)
+                      0.034831    0.000197    1.028433 v i_add/in2[18] (add3x64)
+                                              1.028433   data arrival time
+
+                                 10.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock source latency
+     4    0.108277    0.224783    0.158924   10.158925 ^ clk (in)
+                                                         clk (net)
+                      0.225066    0.000000   10.158925 ^ clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     5    0.056431    0.060012    0.143820   10.302745 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk (net)
+                      0.060748    0.005196   10.307940 ^ clkbuf_1_0__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     7    0.218263    0.176276    0.185622   10.493563 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_1_0__leaf_clk (net)
+                      0.177259    0.010949   10.504512 ^ i_add/clk (add3x64)
+                                 -0.200000   10.304512   clock uncertainty
+                                  0.000000   10.304512   clock reconvergence pessimism
+                                 -6.349880    3.954632   library setup time
+                                              3.954632   data required time
+---------------------------------------------------------------------------------------------
+                                              3.954632   data required time
+                                             -1.028433   data arrival time
+---------------------------------------------------------------------------------------------
+                                              2.926199   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 111 unannotated drivers.
+ clkload0/Y
+ clkload1/Y
+ clkload10/Y
+ clkload11/Y
+ clkload12/Y
+ clkload13/Y
+ clkload14/Y
+ clkload15/Y
+ clkload2/Y
+ clkload3/Y
+ clkload4/Y
+ clkload5/Y
+ clkload6/Y
+ clkload7/Y
+ clkload8/Y
+ clkload9/X
+ i_add_188/HI
+ i_add_189/HI
+ i_add_190/HI
+ i_add_191/HI
+ i_add_192/HI
+ i_add_193/HI
+ i_add_194/HI
+ i_add_195/HI
+ i_add_196/HI
+ i_add_197/HI
+ i_add_198/HI
+ i_add_199/HI
+ i_add_200/HI
+ i_add_201/HI
+ i_add_202/HI
+ i_add_203/HI
+ i_add_204/HI
+ i_add_205/HI
+ i_add_206/HI
+ i_add_207/HI
+ i_add_208/HI
+ i_add_209/HI
+ i_add_210/HI
+ i_add_211/HI
+ i_add_212/HI
+ i_add_213/HI
+ i_add_214/HI
+ i_add_215/HI
+ i_add_216/HI
+ i_add_217/HI
+ i_add_218/HI
+ i_add_219/HI
+ i_add_220/HI
+ i_add_221/HI
+ i_add_222/HI
+ i_add_223/HI
+ i_add_224/HI
+ i_add_225/HI
+ i_add_226/HI
+ i_add_227/HI
+ i_add_228/HI
+ i_add_229/HI
+ i_add_230/HI
+ i_add_231/HI
+ i_add_232/HI
+ i_add_233/HI
+ i_add_234/HI
+ i_add_235/HI
+ i_add_236/HI
+ i_add_237/HI
+ i_add_238/HI
+ i_add_239/HI
+ i_add_240/HI
+ i_add_241/HI
+ i_add_242/HI
+ i_add_243/HI
+ i_add_244/HI
+ i_add_245/HI
+ i_add_246/HI
+ i_add_247/HI
+ i_add_248/HI
+ i_add_249/HI
+ i_add_250/HI
+ i_add_251/HI
+ i_add_252/HI
+ i_add_253/HI
+ i_add_254/HI
+ i_add_255/HI
+ i_add_256/HI
+ i_add_257/HI
+ i_add_258/HI
+ i_add_259/HI
+ i_add_260/HI
+ i_add_261/HI
+ i_add_262/HI
+ i_add_263/HI
+ i_add_264/HI
+ i_add_265/HI
+ i_add_266/HI
+ i_add_267/HI
+ i_add_268/HI
+ i_add_269/HI
+ i_add_270/HI
+ i_add_271/HI
+ i_add_272/HI
+ i_add_273/HI
+ i_add_274/HI
+ i_add_275/HI
+ i_add_276/HI
+ i_add_277/HI
+ i_add_278/HI
+ i_add_279/HI
+ i_add_280/HI
+ i_add_281/HI
+ i_add_282/HI
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 95 unconstrained endpoints.
+  i_add/in1[0]
+  i_add/in1[10]
+  i_add/in1[11]
+  i_add/in1[12]
+  i_add/in1[13]
+  i_add/in1[14]
+  i_add/in1[15]
+  i_add/in1[16]
+  i_add/in1[17]
+  i_add/in1[18]
+  i_add/in1[19]
+  i_add/in1[1]
+  i_add/in1[20]
+  i_add/in1[21]
+  i_add/in1[22]
+  i_add/in1[23]
+  i_add/in1[24]
+  i_add/in1[25]
+  i_add/in1[26]
+  i_add/in1[27]
+  i_add/in1[28]
+  i_add/in1[29]
+  i_add/in1[2]
+  i_add/in1[30]
+  i_add/in1[31]
+  i_add/in1[3]
+  i_add/in1[4]
+  i_add/in1[5]
+  i_add/in1[6]
+  i_add/in1[7]
+  i_add/in1[8]
+  i_add/in1[9]
+  i_add/in2[0]
+  i_add/in2[10]
+  i_add/in2[11]
+  i_add/in2[12]
+  i_add/in2[13]
+  i_add/in2[14]
+  i_add/in2[15]
+  i_add/in2[1]
+  i_add/in2[2]
+  i_add/in2[3]
+  i_add/in2[49]
+  i_add/in2[4]
+  i_add/in2[50]
+  i_add/in2[51]
+  i_add/in2[52]
+  i_add/in2[53]
+  i_add/in2[54]
+  i_add/in2[55]
+  i_add/in2[56]
+  i_add/in2[57]
+  i_add/in2[58]
+  i_add/in2[59]
+  i_add/in2[5]
+  i_add/in2[60]
+  i_add/in2[61]
+  i_add/in2[62]
+  i_add/in2[63]
+  i_add/in2[6]
+  i_add/in2[7]
+  i_add/in2[8]
+  i_add/in2[9]
+  i_add/in3[32]
+  i_add/in3[33]
+  i_add/in3[34]
+  i_add/in3[35]
+  i_add/in3[36]
+  i_add/in3[37]
+  i_add/in3[38]
+  i_add/in3[39]
+  i_add/in3[40]
+  i_add/in3[41]
+  i_add/in3[42]
+  i_add/in3[43]
+  i_add/in3[44]
+  i_add/in3[45]
+  i_add/in3[46]
+  i_add/in3[47]
+  i_add/in3[48]
+  i_add/in3[49]
+  i_add/in3[50]
+  i_add/in3[51]
+  i_add/in3[52]
+  i_add/in3[53]
+  i_add/in3[54]
+  i_add/in3[55]
+  i_add/in3[56]
+  i_add/in3[57]
+  i_add/in3[58]
+  i_add/in3[59]
+  i_add/in3[60]
+  i_add/in3[61]
+  i_add/in3[62]
+  i_add/in3[63]

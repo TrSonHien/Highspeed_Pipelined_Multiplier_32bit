@@ -1,0 +1,568 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: _1045_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: i_add (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     4    0.068558    0.191598    0.140485    0.140485 ^ clk (in)
+                                                         clk (net)
+                      0.191721    0.000000    0.140485 ^ clkbuf_regs_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     3    0.026960    0.049706    0.181037    0.321522 ^ clkbuf_regs_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         delaynet_0_clk (net)
+                      0.049765    0.001432    0.322954 ^ delaybuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     3    0.024015    0.045482    0.130086    0.453040 ^ delaybuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clk_regs (net)
+                      0.045927    0.002978    0.456018 ^ clkbuf_0_clk_regs/A (sky130_fd_sc_hd__clkbuf_16)
+    33    0.241305    0.251228    0.274756    0.730774 ^ clkbuf_0_clk_regs/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk_regs (net)
+                      0.252167    0.012553    0.743327 ^ clkbuf_4_8_0_clk_regs/A (sky130_fd_sc_hd__clkbuf_16)
+    27    0.072917    0.091879    0.233663    0.976990 ^ clkbuf_4_8_0_clk_regs/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_4_8_0_clk_regs (net)
+                      0.091924    0.001931    0.978922 ^ _1045_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.007176    0.044861    0.326633    1.305555 v _1045_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                         term_mid[18] (net)
+                      0.044861    0.000218    1.305773 v i_add/in2[18] (add3x64)
+                                              1.305773   data arrival time
+
+                                 10.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock source latency
+     4    0.068558    0.191598    0.139901   10.139901 ^ clk (in)
+                                                         clk (net)
+                      0.191688    0.000000   10.139901 ^ clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     5    0.041545    0.062371    0.191665   10.331566 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk (net)
+                      0.062993    0.003870   10.335436 ^ clkbuf_1_0__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     7    0.176954    0.189320    0.235505   10.570941 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_1_0__leaf_clk (net)
+                      0.190286    0.011048   10.581989 ^ i_add/clk (add3x64)
+                                 -1.500000    9.081988   clock uncertainty
+                                  0.000000    9.081988   clock reconvergence pessimism
+                                 -6.349880    2.732108   library setup time
+                                              2.732108   data required time
+---------------------------------------------------------------------------------------------
+                                              2.732108   data required time
+                                             -1.305773   data arrival time
+---------------------------------------------------------------------------------------------
+                                              1.426336   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max slew
+
+Pin                                        Limit        Slew       Slack
+------------------------------------------------------------------------
+_0644_/A                                0.500000    0.579243   -0.079243 (VIOLATED)
+ANTENNA__0644__A/DIODE                  0.500000    0.579238   -0.079238 (VIOLATED)
+ANTENNA__0610__A/DIODE                  0.500000    0.579224   -0.079224 (VIOLATED)
+_0610_/A                                0.500000    0.579208   -0.079208 (VIOLATED)
+_0646_/A                                0.500000    0.579176   -0.079176 (VIOLATED)
+ANTENNA__0646__A/DIODE                  0.500000    0.579171   -0.079171 (VIOLATED)
+_0609_/A                                0.500000    0.579146   -0.079146 (VIOLATED)
+ANTENNA__0609__A/DIODE                  0.500000    0.579144   -0.079144 (VIOLATED)
+_0611_/A                                0.500000    0.579131   -0.079131 (VIOLATED)
+ANTENNA__0611__A/DIODE                  0.500000    0.579125   -0.079125 (VIOLATED)
+ANTENNA__0656__A/DIODE                  0.500000    0.578974   -0.078974 (VIOLATED)
+_0647_/A                                0.500000    0.578895   -0.078895 (VIOLATED)
+_0608_/A                                0.500000    0.578894   -0.078894 (VIOLATED)
+_0606_/A                                0.500000    0.578891   -0.078891 (VIOLATED)
+ANTENNA__0647__A/DIODE                  0.500000    0.578889   -0.078889 (VIOLATED)
+ANTENNA__0606__A/DIODE                  0.500000    0.578887   -0.078887 (VIOLATED)
+_0648_/A                                0.500000    0.578867   -0.078867 (VIOLATED)
+_0642_/A                                0.500000    0.578867   -0.078867 (VIOLATED)
+ANTENNA__0648__A/DIODE                  0.500000    0.578864   -0.078864 (VIOLATED)
+_0640_/A                                0.500000    0.578863   -0.078863 (VIOLATED)
+ANTENNA__0642__A/DIODE                  0.500000    0.578862   -0.078862 (VIOLATED)
+ANTENNA__0640__A/DIODE                  0.500000    0.578856   -0.078856 (VIOLATED)
+ANTENNA__0608__A/DIODE                  0.500000    0.578855   -0.078855 (VIOLATED)
+_0645_/A                                0.500000    0.578810   -0.078810 (VIOLATED)
+ANTENNA__0645__A/DIODE                  0.500000    0.578806   -0.078806 (VIOLATED)
+_0607_/A                                0.500000    0.578757   -0.078757 (VIOLATED)
+ANTENNA__0607__A/DIODE                  0.500000    0.578752   -0.078752 (VIOLATED)
+_0639_/A                                0.500000    0.578499   -0.078499 (VIOLATED)
+ANTENNA__0639__A/DIODE                  0.500000    0.578492   -0.078492 (VIOLATED)
+_0656_/A                                0.500000    0.578077   -0.078077 (VIOLATED)
+_0615_/A                                0.500000    0.577723   -0.077723 (VIOLATED)
+_0653_/A                                0.500000    0.577722   -0.077722 (VIOLATED)
+ANTENNA__0615__A/DIODE                  0.500000    0.577718   -0.077718 (VIOLATED)
+ANTENNA__0653__A/DIODE                  0.500000    0.577695   -0.077695 (VIOLATED)
+_0658_/A                                0.500000    0.577636   -0.077636 (VIOLATED)
+ANTENNA__0658__A/DIODE                  0.500000    0.577366   -0.077366 (VIOLATED)
+_0976_/A                                0.500000    0.577101   -0.077101 (VIOLATED)
+ANTENNA__0976__A/DIODE                  0.500000    0.577098   -0.077098 (VIOLATED)
+_0977_/A                                0.500000    0.576969   -0.076969 (VIOLATED)
+ANTENNA__0977__A/DIODE                  0.500000    0.576961   -0.076961 (VIOLATED)
+_0655_/A                                0.500000    0.576959   -0.076959 (VIOLATED)
+ANTENNA__0655__A/DIODE                  0.500000    0.576954   -0.076954 (VIOLATED)
+_0978_/A                                0.500000    0.576954   -0.076954 (VIOLATED)
+ANTENNA__0978__A/DIODE                  0.500000    0.576951   -0.076951 (VIOLATED)
+_0974_/A                                0.500000    0.576321   -0.076321 (VIOLATED)
+ANTENNA__0974__A/DIODE                  0.500000    0.576318   -0.076318 (VIOLATED)
+_0551_/A                                0.500000    0.576311   -0.076311 (VIOLATED)
+ANTENNA__0551__A/DIODE                  0.500000    0.576306   -0.076306 (VIOLATED)
+_0545_/A                                0.500000    0.576285   -0.076285 (VIOLATED)
+ANTENNA__0545__A/DIODE                  0.500000    0.576278   -0.076278 (VIOLATED)
+ANTENNA__0678__B1/DIODE                 0.500000    0.575908   -0.075908 (VIOLATED)
+_0543_/A                                0.500000    0.575905   -0.075905 (VIOLATED)
+ANTENNA__0543__A/DIODE                  0.500000    0.575903   -0.075903 (VIOLATED)
+_0678_/B1                               0.500000    0.575552   -0.075552 (VIOLATED)
+_0550_/A                                0.500000    0.575533   -0.075533 (VIOLATED)
+ANTENNA__0550__A/DIODE                  0.500000    0.575529   -0.075529 (VIOLATED)
+_0548_/A                                0.500000    0.575126   -0.075126 (VIOLATED)
+ANTENNA__0548__A/DIODE                  0.500000    0.575123   -0.075123 (VIOLATED)
+_0542_/A                                0.500000    0.574804   -0.074804 (VIOLATED)
+ANTENNA__0542__A/DIODE                  0.500000    0.574802   -0.074801 (VIOLATED)
+ANTENNA__0686__B1/DIODE                 0.500000    0.574361   -0.074361 (VIOLATED)
+_0686_/B1                               0.500000    0.573936   -0.073936 (VIOLATED)
+_0654_/A                                0.500000    0.573201   -0.073201 (VIOLATED)
+ANTENNA__0654__A/DIODE                  0.500000    0.573196   -0.073196 (VIOLATED)
+_0659_/A                                0.500000    0.573172   -0.073172 (VIOLATED)
+ANTENNA__0659__A/DIODE                  0.500000    0.573168   -0.073168 (VIOLATED)
+_0613_/A                                0.500000    0.572507   -0.072507 (VIOLATED)
+ANTENNA__0613__A/DIODE                  0.500000    0.572502   -0.072502 (VIOLATED)
+_0643_/A                                0.500000    0.572490   -0.072490 (VIOLATED)
+ANTENNA__0643__A/DIODE                  0.500000    0.572487   -0.072487 (VIOLATED)
+_0612_/A                                0.500000    0.572472   -0.072472 (VIOLATED)
+ANTENNA__0612__A/DIODE                  0.500000    0.572471   -0.072471 (VIOLATED)
+_0614_/A                                0.500000    0.572397   -0.072397 (VIOLATED)
+ANTENNA__0614__A/DIODE                  0.500000    0.572390   -0.072390 (VIOLATED)
+ANTENNA__0705__A/DIODE                  0.500000    0.572333   -0.072333 (VIOLATED)
+_0975_/A                                0.500000    0.571817   -0.071817 (VIOLATED)
+ANTENNA__0975__A/DIODE                  0.500000    0.571813   -0.071813 (VIOLATED)
+_0705_/A                                0.500000    0.571803   -0.071803 (VIOLATED)
+_0700_/A                                0.500000    0.570862   -0.070862 (VIOLATED)
+ANTENNA__0700__A/DIODE                  0.500000    0.570858   -0.070858 (VIOLATED)
+_0657_/A                                0.500000    0.570319   -0.070319 (VIOLATED)
+ANTENNA__0657__A/DIODE                  0.500000    0.570314   -0.070314 (VIOLATED)
+_0549_/A                                0.500000    0.569311   -0.069311 (VIOLATED)
+_0662_/A                                0.500000    0.569307   -0.069307 (VIOLATED)
+ANTENNA__0662__A/DIODE                  0.500000    0.569303   -0.069303 (VIOLATED)
+ANTENNA__0549__A/DIODE                  0.500000    0.569300   -0.069300 (VIOLATED)
+_0577_/A                                0.500000    0.568129   -0.068129 (VIOLATED)
+ANTENNA__0577__A/DIODE                  0.500000    0.568125   -0.068125 (VIOLATED)
+_0621_/A                                0.500000    0.567326   -0.067326 (VIOLATED)
+ANTENNA__0621__A/DIODE                  0.500000    0.567322   -0.067322 (VIOLATED)
+_0651_/A                                0.500000    0.567316   -0.067316 (VIOLATED)
+ANTENNA__0651__A/DIODE                  0.500000    0.567311   -0.067311 (VIOLATED)
+_0641_/A                                0.500000    0.567304   -0.067304 (VIOLATED)
+_0620_/A                                0.500000    0.567301   -0.067301 (VIOLATED)
+_0649_/A                                0.500000    0.567301   -0.067301 (VIOLATED)
+ANTENNA__0641__A/DIODE                  0.500000    0.567298   -0.067298 (VIOLATED)
+ANTENNA__0649__A/DIODE                  0.500000    0.567297   -0.067297 (VIOLATED)
+ANTENNA__0620__A/DIODE                  0.500000    0.567296   -0.067296 (VIOLATED)
+_0579_/A                                0.500000    0.567246   -0.067246 (VIOLATED)
+ANTENNA__0579__A/DIODE                  0.500000    0.567241   -0.067241 (VIOLATED)
+_0605_/A                                0.500000    0.567174   -0.067174 (VIOLATED)
+_0576_/A                                0.500000    0.567170   -0.067170 (VIOLATED)
+ANTENNA__0576__A/DIODE                  0.500000    0.567168   -0.067168 (VIOLATED)
+ANTENNA__0605__A/DIODE                  0.500000    0.567167   -0.067167 (VIOLATED)
+_0547_/A                                0.500000    0.566533   -0.066533 (VIOLATED)
+ANTENNA__0547__A/DIODE                  0.500000    0.566522   -0.066522 (VIOLATED)
+_0660_/A                                0.500000    0.566513   -0.066513 (VIOLATED)
+_0616_/A                                0.500000    0.566512   -0.066512 (VIOLATED)
+_0546_/A                                0.500000    0.566510   -0.066510 (VIOLATED)
+ANTENNA__0546__A/DIODE                  0.500000    0.566510   -0.066510 (VIOLATED)
+ANTENNA__0660__A/DIODE                  0.500000    0.566509   -0.066509 (VIOLATED)
+_0603_/A                                0.500000    0.566483   -0.066483 (VIOLATED)
+ANTENNA__0618__A/DIODE                  0.500000    0.566481   -0.066481 (VIOLATED)
+ANTENNA__0603__A/DIODE                  0.500000    0.566479   -0.066479 (VIOLATED)
+_0618_/A                                0.500000    0.566468   -0.066468 (VIOLATED)
+ANTENNA__0616__A/DIODE                  0.500000    0.566465   -0.066465 (VIOLATED)
+_0650_/A                                0.500000    0.565775   -0.065775 (VIOLATED)
+ANTENNA__0650__A/DIODE                  0.500000    0.565773   -0.065773 (VIOLATED)
+_0619_/A                                0.500000    0.565769   -0.065770 (VIOLATED)
+ANTENNA__0619__A/DIODE                  0.500000    0.565744   -0.065744 (VIOLATED)
+_0668_/A                                0.500000    0.565736   -0.065736 (VIOLATED)
+_0580_/A                                0.500000    0.565733   -0.065733 (VIOLATED)
+ANTENNA__0580__A/DIODE                  0.500000    0.565730   -0.065730 (VIOLATED)
+_0663_/A                                0.500000    0.565720   -0.065720 (VIOLATED)
+ANTENNA__0663__A/DIODE                  0.500000    0.565714   -0.065714 (VIOLATED)
+ANTENNA__0668__A/DIODE                  0.500000    0.565713   -0.065713 (VIOLATED)
+_0627_/A                                0.500000    0.564236   -0.064236 (VIOLATED)
+_0955_/A                                0.500000    0.564219   -0.064219 (VIOLATED)
+ANTENNA__0955__A/DIODE                  0.500000    0.564214   -0.064214 (VIOLATED)
+ANTENNA__0627__A/DIODE                  0.500000    0.564214   -0.064214 (VIOLATED)
+_0667_/A                                0.500000    0.564165   -0.064165 (VIOLATED)
+_0664_/A                                0.500000    0.564163   -0.064163 (VIOLATED)
+ANTENNA__0667__A/DIODE                  0.500000    0.564163   -0.064163 (VIOLATED)
+ANTENNA__0664__A/DIODE                  0.500000    0.564161   -0.064161 (VIOLATED)
+ANTENNA__0617__A/DIODE                  0.500000    0.564118   -0.064118 (VIOLATED)
+_0617_/A                                0.500000    0.564115   -0.064114 (VIOLATED)
+_0652_/A                                0.500000    0.562697   -0.062697 (VIOLATED)
+_0582_/A                                0.500000    0.562684   -0.062684 (VIOLATED)
+ANTENNA__0582__A/DIODE                  0.500000    0.562647   -0.062647 (VIOLATED)
+ANTENNA__0652__A/DIODE                  0.500000    0.562627   -0.062627 (VIOLATED)
+_0625_/A                                0.500000    0.562602   -0.062602 (VIOLATED)
+ANTENNA__0625__A/DIODE                  0.500000    0.562598   -0.062598 (VIOLATED)
+_0665_/A                                0.500000    0.561742   -0.061742 (VIOLATED)
+ANTENNA__0665__A/DIODE                  0.500000    0.561738   -0.061738 (VIOLATED)
+_0626_/A                                0.500000    0.561729   -0.061729 (VIOLATED)
+ANTENNA__0622__A/DIODE                  0.500000    0.561725   -0.061725 (VIOLATED)
+ANTENNA__0626__A/DIODE                  0.500000    0.561724   -0.061724 (VIOLATED)
+_0622_/A                                0.500000    0.560208   -0.060208 (VIOLATED)
+_0670_/A                                0.500000    0.558764   -0.058764 (VIOLATED)
+ANTENNA__0670__A/DIODE                  0.500000    0.558761   -0.058760 (VIOLATED)
+_0666_/A                                0.500000    0.558727   -0.058727 (VIOLATED)
+ANTENNA__0666__A/DIODE                  0.500000    0.558723   -0.058723 (VIOLATED)
+_0637_/A                                0.500000    0.557869   -0.057869 (VIOLATED)
+ANTENNA__0637__A/DIODE                  0.500000    0.557867   -0.057867 (VIOLATED)
+ANTENNA__0957__A/DIODE                  0.500000    0.557829   -0.057829 (VIOLATED)
+_0601_/A                                0.500000    0.557196   -0.057196 (VIOLATED)
+_0600_/A                                0.500000    0.557194   -0.057194 (VIOLATED)
+ANTENNA__0601__A/DIODE                  0.500000    0.557192   -0.057192 (VIOLATED)
+ANTENNA__0600__A/DIODE                  0.500000    0.557192   -0.057192 (VIOLATED)
+_0599_/A                                0.500000    0.557171   -0.057171 (VIOLATED)
+ANTENNA__0599__A/DIODE                  0.500000    0.557169   -0.057169 (VIOLATED)
+_0596_/A                                0.500000    0.557152   -0.057152 (VIOLATED)
+ANTENNA__0596__A/DIODE                  0.500000    0.557149   -0.057149 (VIOLATED)
+_0634_/A                                0.500000    0.557074   -0.057074 (VIOLATED)
+ANTENNA__0634__A/DIODE                  0.500000    0.557070   -0.057070 (VIOLATED)
+_0578_/A                                0.500000    0.556985   -0.056985 (VIOLATED)
+ANTENNA__0578__A/DIODE                  0.500000    0.556983   -0.056983 (VIOLATED)
+_0630_/A                                0.500000    0.556979   -0.056979 (VIOLATED)
+_0598_/A                                0.500000    0.556975   -0.056975 (VIOLATED)
+ANTENNA__0594__A/DIODE                  0.500000    0.556975   -0.056975 (VIOLATED)
+ANTENNA__0630__A/DIODE                  0.500000    0.556973   -0.056973 (VIOLATED)
+ANTENNA__0598__A/DIODE                  0.500000    0.556972   -0.056972 (VIOLATED)
+_0956_/A                                0.500000    0.556957   -0.056957 (VIOLATED)
+_0957_/A                                0.500000    0.556956   -0.056956 (VIOLATED)
+ANTENNA__0956__A/DIODE                  0.500000    0.556955   -0.056955 (VIOLATED)
+_0594_/A                                0.500000    0.556891   -0.056891 (VIOLATED)
+_0581_/A                                0.500000    0.556837   -0.056837 (VIOLATED)
+_0573_/A                                0.500000    0.556835   -0.056835 (VIOLATED)
+ANTENNA__0581__A/DIODE                  0.500000    0.556832   -0.056832 (VIOLATED)
+ANTENNA__0573__A/DIODE                  0.500000    0.556830   -0.056830 (VIOLATED)
+_0595_/A                                0.500000    0.556795   -0.056795 (VIOLATED)
+ANTENNA__0595__A/DIODE                  0.500000    0.556791   -0.056791 (VIOLATED)
+_0597_/A                                0.500000    0.556587   -0.056587 (VIOLATED)
+ANTENNA__0597__A/DIODE                  0.500000    0.556583   -0.056583 (VIOLATED)
+_0972_/A                                0.500000    0.556230   -0.056230 (VIOLATED)
+ANTENNA__0972__A/DIODE                  0.500000    0.556227   -0.056227 (VIOLATED)
+_0587_/A                                0.500000    0.556214   -0.056214 (VIOLATED)
+_0636_/A                                0.500000    0.556212   -0.056212 (VIOLATED)
+ANTENNA__0587__A/DIODE                  0.500000    0.556212   -0.056212 (VIOLATED)
+ANTENNA__0636__A/DIODE                  0.500000    0.556207   -0.056207 (VIOLATED)
+_0593_/A                                0.500000    0.556085   -0.056085 (VIOLATED)
+ANTENNA__0593__A/DIODE                  0.500000    0.556084   -0.056084 (VIOLATED)
+_0586_/A                                0.500000    0.556037   -0.056037 (VIOLATED)
+ANTENNA__0586__A/DIODE                  0.500000    0.556024   -0.056024 (VIOLATED)
+_0583_/A                                0.500000    0.556010   -0.056010 (VIOLATED)
+ANTENNA__0583__A/DIODE                  0.500000    0.556007   -0.056007 (VIOLATED)
+_0602_/A                                0.500000    0.555966   -0.055966 (VIOLATED)
+_0584_/A                                0.500000    0.555965   -0.055965 (VIOLATED)
+ANTENNA__0602__A/DIODE                  0.500000    0.555962   -0.055962 (VIOLATED)
+ANTENNA__0584__A/DIODE                  0.500000    0.555960   -0.055960 (VIOLATED)
+_0623_/A                                0.500000    0.555879   -0.055879 (VIOLATED)
+ANTENNA__0623__A/DIODE                  0.500000    0.555875   -0.055875 (VIOLATED)
+_0585_/A                                0.500000    0.555497   -0.055497 (VIOLATED)
+ANTENNA__0585__A/DIODE                  0.500000    0.555494   -0.055494 (VIOLATED)
+_0544_/A                                0.500000    0.555469   -0.055469 (VIOLATED)
+ANTENNA__0544__A/DIODE                  0.500000    0.555464   -0.055464 (VIOLATED)
+_0604_/A                                0.500000    0.554867   -0.054867 (VIOLATED)
+ANTENNA__0604__A/DIODE                  0.500000    0.554864   -0.054864 (VIOLATED)
+ANTENNA__0589__A/DIODE                  0.500000    0.554629   -0.054629 (VIOLATED)
+wire171/A                               0.500000    0.554424   -0.054424 (VIOLATED)
+ANTENNA_wire171_A/DIODE                 0.500000    0.554420   -0.054420 (VIOLATED)
+_0589_/A                                0.500000    0.554390   -0.054390 (VIOLATED)
+_0588_/A                                0.500000    0.554386   -0.054386 (VIOLATED)
+ANTENNA__0588__A/DIODE                  0.500000    0.554384   -0.054384 (VIOLATED)
+_0973_/A                                0.500000    0.554136   -0.054136 (VIOLATED)
+ANTENNA__0973__A/DIODE                  0.500000    0.554130   -0.054130 (VIOLATED)
+_0969_/A                                0.500000    0.553352   -0.053352 (VIOLATED)
+_0633_/A                                0.500000    0.553347   -0.053347 (VIOLATED)
+ANTENNA__0969__A/DIODE                  0.500000    0.553345   -0.053345 (VIOLATED)
+ANTENNA__0633__A/DIODE                  0.500000    0.553342   -0.053342 (VIOLATED)
+_0959_/A                                0.500000    0.553146   -0.053146 (VIOLATED)
+ANTENNA__0959__A/DIODE                  0.500000    0.553145   -0.053145 (VIOLATED)
+_0971_/A                                0.500000    0.552865   -0.052865 (VIOLATED)
+ANTENNA__0971__A/DIODE                  0.500000    0.552862   -0.052862 (VIOLATED)
+ANTENNA_i_add_out[60]/DIODE             0.500000    0.552837   -0.052837 (VIOLATED)
+i_add/out[60]                           0.500000    0.552837   -0.052837 (VIOLATED)
+_0967_/A                                0.500000    0.552365   -0.052365 (VIOLATED)
+ANTENNA__0967__A/DIODE                  0.500000    0.552362   -0.052362 (VIOLATED)
+_0968_/A                                0.500000    0.552074   -0.052074 (VIOLATED)
+ANTENNA__0968__A/DIODE                  0.500000    0.552071   -0.052071 (VIOLATED)
+_0970_/A                                0.500000    0.551278   -0.051278 (VIOLATED)
+ANTENNA__0970__A/DIODE                  0.500000    0.551274   -0.051274 (VIOLATED)
+_0958_/A                                0.500000    0.549163   -0.049163 (VIOLATED)
+ANTENNA__0958__A/DIODE                  0.500000    0.549159   -0.049159 (VIOLATED)
+wire170/A                               0.500000    0.548868   -0.048868 (VIOLATED)
+ANTENNA_wire170_A/DIODE                 0.500000    0.548864   -0.048864 (VIOLATED)
+_0624_/A                                0.500000    0.548199   -0.048199 (VIOLATED)
+ANTENNA__0624__A/DIODE                  0.500000    0.548196   -0.048196 (VIOLATED)
+_0960_/A                                0.500000    0.548188   -0.048188 (VIOLATED)
+ANTENNA__0960__A/DIODE                  0.500000    0.548187   -0.048187 (VIOLATED)
+ANTENNA_i_add_out[61]/DIODE             0.500000    0.547311   -0.047311 (VIOLATED)
+i_add/out[61]                           0.500000    0.547311   -0.047311 (VIOLATED)
+_0732_/B1                               0.500000    0.546573   -0.046573 (VIOLATED)
+ANTENNA__0732__B1/DIODE                 0.500000    0.546568   -0.046568 (VIOLATED)
+ANTENNA__0661__A/DIODE                  0.500000    0.546560   -0.046560 (VIOLATED)
+_0661_/A                                0.500000    0.545889   -0.045889 (VIOLATED)
+_0961_/A                                0.500000    0.545029   -0.045029 (VIOLATED)
+ANTENNA__0961__A/DIODE                  0.500000    0.545029   -0.045029 (VIOLATED)
+ANTENNA__0669__A/DIODE                  0.500000    0.544245   -0.044245 (VIOLATED)
+_0669_/A                                0.500000    0.544245   -0.044245 (VIOLATED)
+_0962_/A                                0.500000    0.544243   -0.044243 (VIOLATED)
+ANTENNA__0962__A/DIODE                  0.500000    0.544242   -0.044242 (VIOLATED)
+_0954_/A                                0.500000    0.544217   -0.044217 (VIOLATED)
+ANTENNA__0954__A/DIODE                  0.500000    0.543438   -0.043438 (VIOLATED)
+_0628_/A                                0.500000    0.540876   -0.040876 (VIOLATED)
+ANTENNA__0628__A/DIODE                  0.500000    0.540872   -0.040872 (VIOLATED)
+_0629_/A                                0.500000    0.540868   -0.040868 (VIOLATED)
+ANTENNA__0629__A/DIODE                  0.500000    0.540867   -0.040867 (VIOLATED)
+_0552_/A                                0.500000    0.539424   -0.039424 (VIOLATED)
+ANTENNA__0552__A/DIODE                  0.500000    0.539423   -0.039423 (VIOLATED)
+_0592_/A                                0.500000    0.538178   -0.038178 (VIOLATED)
+ANTENNA__0592__A/DIODE                  0.500000    0.538024   -0.038024 (VIOLATED)
+ANTENNA_load_slew186_X/DIODE            0.500000    0.537747   -0.037747 (VIOLATED)
+load_slew186/X                          0.500000    0.537555   -0.037555 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 111 unannotated drivers.
+ clkload0/Y
+ clkload1/Y
+ clkload10/Y
+ clkload11/Y
+ clkload12/Y
+ clkload13/Y
+ clkload14/Y
+ clkload15/Y
+ clkload2/Y
+ clkload3/Y
+ clkload4/Y
+ clkload5/Y
+ clkload6/Y
+ clkload7/Y
+ clkload8/Y
+ clkload9/X
+ i_add_188/HI
+ i_add_189/HI
+ i_add_190/HI
+ i_add_191/HI
+ i_add_192/HI
+ i_add_193/HI
+ i_add_194/HI
+ i_add_195/HI
+ i_add_196/HI
+ i_add_197/HI
+ i_add_198/HI
+ i_add_199/HI
+ i_add_200/HI
+ i_add_201/HI
+ i_add_202/HI
+ i_add_203/HI
+ i_add_204/HI
+ i_add_205/HI
+ i_add_206/HI
+ i_add_207/HI
+ i_add_208/HI
+ i_add_209/HI
+ i_add_210/HI
+ i_add_211/HI
+ i_add_212/HI
+ i_add_213/HI
+ i_add_214/HI
+ i_add_215/HI
+ i_add_216/HI
+ i_add_217/HI
+ i_add_218/HI
+ i_add_219/HI
+ i_add_220/HI
+ i_add_221/HI
+ i_add_222/HI
+ i_add_223/HI
+ i_add_224/HI
+ i_add_225/HI
+ i_add_226/HI
+ i_add_227/HI
+ i_add_228/HI
+ i_add_229/HI
+ i_add_230/HI
+ i_add_231/HI
+ i_add_232/HI
+ i_add_233/HI
+ i_add_234/HI
+ i_add_235/HI
+ i_add_236/HI
+ i_add_237/HI
+ i_add_238/HI
+ i_add_239/HI
+ i_add_240/HI
+ i_add_241/HI
+ i_add_242/HI
+ i_add_243/HI
+ i_add_244/HI
+ i_add_245/HI
+ i_add_246/HI
+ i_add_247/HI
+ i_add_248/HI
+ i_add_249/HI
+ i_add_250/HI
+ i_add_251/HI
+ i_add_252/HI
+ i_add_253/HI
+ i_add_254/HI
+ i_add_255/HI
+ i_add_256/HI
+ i_add_257/HI
+ i_add_258/HI
+ i_add_259/HI
+ i_add_260/HI
+ i_add_261/HI
+ i_add_262/HI
+ i_add_263/HI
+ i_add_264/HI
+ i_add_265/HI
+ i_add_266/HI
+ i_add_267/HI
+ i_add_268/HI
+ i_add_269/HI
+ i_add_270/HI
+ i_add_271/HI
+ i_add_272/HI
+ i_add_273/HI
+ i_add_274/HI
+ i_add_275/HI
+ i_add_276/HI
+ i_add_277/HI
+ i_add_278/HI
+ i_add_279/HI
+ i_add_280/HI
+ i_add_281/HI
+ i_add_282/HI
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 264
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_1v80: 264
+max fanout violation count 0
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_1v80: 0
+max cap violation count 0
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_1v80: 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 95 unconstrained endpoints.
+  i_add/in1[0]
+  i_add/in1[10]
+  i_add/in1[11]
+  i_add/in1[12]
+  i_add/in1[13]
+  i_add/in1[14]
+  i_add/in1[15]
+  i_add/in1[16]
+  i_add/in1[17]
+  i_add/in1[18]
+  i_add/in1[19]
+  i_add/in1[1]
+  i_add/in1[20]
+  i_add/in1[21]
+  i_add/in1[22]
+  i_add/in1[23]
+  i_add/in1[24]
+  i_add/in1[25]
+  i_add/in1[26]
+  i_add/in1[27]
+  i_add/in1[28]
+  i_add/in1[29]
+  i_add/in1[2]
+  i_add/in1[30]
+  i_add/in1[31]
+  i_add/in1[3]
+  i_add/in1[4]
+  i_add/in1[5]
+  i_add/in1[6]
+  i_add/in1[7]
+  i_add/in1[8]
+  i_add/in1[9]
+  i_add/in2[0]
+  i_add/in2[10]
+  i_add/in2[11]
+  i_add/in2[12]
+  i_add/in2[13]
+  i_add/in2[14]
+  i_add/in2[15]
+  i_add/in2[1]
+  i_add/in2[2]
+  i_add/in2[3]
+  i_add/in2[49]
+  i_add/in2[4]
+  i_add/in2[50]
+  i_add/in2[51]
+  i_add/in2[52]
+  i_add/in2[53]
+  i_add/in2[54]
+  i_add/in2[55]
+  i_add/in2[56]
+  i_add/in2[57]
+  i_add/in2[58]
+  i_add/in2[59]
+  i_add/in2[5]
+  i_add/in2[60]
+  i_add/in2[61]
+  i_add/in2[62]
+  i_add/in2[63]
+  i_add/in2[6]
+  i_add/in2[7]
+  i_add/in2[8]
+  i_add/in2[9]
+  i_add/in3[32]
+  i_add/in3[33]
+  i_add/in3[34]
+  i_add/in3[35]
+  i_add/in3[36]
+  i_add/in3[37]
+  i_add/in3[38]
+  i_add/in3[39]
+  i_add/in3[40]
+  i_add/in3[41]
+  i_add/in3[42]
+  i_add/in3[43]
+  i_add/in3[44]
+  i_add/in3[45]
+  i_add/in3[46]
+  i_add/in3[47]
+  i_add/in3[48]
+  i_add/in3[49]
+  i_add/in3[50]
+  i_add/in3[51]
+  i_add/in3[52]
+  i_add/in3[53]
+  i_add/in3[54]
+  i_add/in3[55]
+  i_add/in3[56]
+  i_add/in3[57]
+  i_add/in3[58]
+  i_add/in3[59]
+  i_add/in3[60]
+  i_add/in3[61]
+  i_add/in3[62]
+  i_add/in3[63]

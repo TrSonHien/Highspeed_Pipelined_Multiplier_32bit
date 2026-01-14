@@ -1,0 +1,76 @@
+if {[file exists ~/openlane2/my_script/script_matt.tcl]} {
+    source ~/openlane2/my_script/script_matt.tcl
+}
+Reading timing models for corner max_ss_100C_1v60…
+Reading timing library for the 'max_ss_100C_1v60' corner at '/home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/27-openroad-globalplacement/mult_16x16.odb'…
+Reading design constraints file at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/mult_16x16.sdc'…
+[INFO] Setting RC values…
+[INFO RSZ-0027] Inserted 33 input buffers.
+[INFO RSZ-0028] Inserted 32 output buffers.
+[INFO RSZ-0058] Using max wire length 6352um.
+Iteration | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------
+        0 |       0 |       0 |             0 |      2655
+      100 |      91 |       0 |             0 |      2555
+      200 |     170 |       0 |             0 |      2455
+      300 |     245 |       0 |             0 |      2355
+      400 |     324 |       0 |             0 |      2255
+      500 |     408 |       0 |             0 |      2155
+      600 |     479 |       0 |             0 |      2055
+      700 |     550 |       0 |             0 |      1955
+      800 |     626 |       0 |             0 |      1855
+      900 |     704 |       0 |             0 |      1755
+     1000 |     781 |       1 |             1 |      1655
+     1100 |     857 |       1 |             1 |      1555
+     1200 |     933 |       1 |             1 |      1455
+     1300 |    1001 |       1 |             1 |      1355
+     1400 |    1081 |       1 |             1 |      1255
+     1500 |    1156 |       1 |             1 |      1155
+     1600 |    1227 |       2 |             2 |      1055
+     1700 |    1303 |       2 |             2 |       955
+     1800 |    1383 |       2 |             2 |       855
+     1900 |    1466 |       2 |             2 |       755
+     2000 |    1539 |       2 |             2 |       655
+     2100 |    1622 |       2 |             2 |       555
+     2200 |    1700 |       2 |             2 |       455
+     2300 |    1784 |       2 |             2 |       355
+     2400 |    1859 |       2 |             2 |       255
+     2500 |    1953 |      17 |             9 |       155
+     2600 |    2238 |     209 |            43 |        55
+    final |    2260 |     209 |            43 |         0
+---------------------------------------------------------
+[INFO RSZ-0034] Found 2 slew violations.
+[INFO RSZ-0035] Found 41 fanout violations.
+[INFO RSZ-0038] Inserted 209 buffers in 43 nets.
+[INFO RSZ-0039] Resized 2260 instances.
+Placement Analysis
+---------------------------------
+total displacement       8521.6 u
+average displacement        2.4 u
+max displacement           13.7 u
+original HPWL           58054.8 u
+legalized HPWL          66620.1 u
+delta HPWL                   15 %
+
+[INFO DPL-0020] Mirrored 1301 instances
+[INFO DPL-0021] HPWL before           66620.1 u
+[INFO DPL-0022] HPWL after            64524.5 u
+[INFO DPL-0023] HPWL delta               -3.1 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               148     555.53
+  Tap cell                                608     760.73
+  Timing Repair Buffer                    274    1697.88
+  Inverter                                 61     269.01
+  Sequential cell                          64    1286.23
+  Multi-Input combinational cell         2431   21300.43
+  Total                                  3586   25869.81
+Writing OpenROAD database to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/31-openroad-repairdesignpostgpl/mult_16x16.odb'…
+Writing netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/31-openroad-repairdesignpostgpl/mult_16x16.nl.v'…
+Writing powered netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/31-openroad-repairdesignpostgpl/mult_16x16.pnl.v'…
+Writing layout to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/31-openroad-repairdesignpostgpl/mult_16x16.def'…
+Writing timing constraints to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/MULT/31-openroad-repairdesignpostgpl/mult_16x16.sdc'…

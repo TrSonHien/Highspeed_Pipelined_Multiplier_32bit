@@ -1,0 +1,23 @@
+digraph "add3x64" {
+label="add3x64";
+rankdir="LR";
+remincross=true;
+n4 [ shape=octagon, label="out", color="black", fontcolor="black"];
+n5 [ shape=octagon, label="in3", color="black", fontcolor="black"];
+n6 [ shape=octagon, label="in2", color="black", fontcolor="black"];
+n7 [ shape=octagon, label="in1", color="black", fontcolor="black"];
+n8 [ shape=octagon, label="rst", color="black", fontcolor="black"];
+n9 [ shape=octagon, label="clk", color="black", fontcolor="black"];
+c13 [ shape=record, label="{{<p10> A|<p11> B}|$3\n$add|{<p12> Y}}",  ];
+c14 [ shape=record, label="{{<p10> A|<p11> B}|$2\n$add|{<p12> Y}}",  ];
+p0 [shape=box, style=rounded, label="PROC $1\n/home/hien/openlane2/designs/fn_pj/pipeline-mult/src/ba_pipelined.v:10.5-15.5", ];
+c13:p12:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c14:p12:e -> c13:p10:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p0:e -> n4:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n4:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n5:e -> c13:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n6:e -> c14:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n7:e -> c14:p10:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n8:e -> p0:w [color="black", fontcolor="black", label=""];
+n9:e -> p0:w [color="black", fontcolor="black", label=""];
+}

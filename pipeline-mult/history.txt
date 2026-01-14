@@ -1,0 +1,5 @@
+openlane mult.json --run-tag MULT 
+rsync -ax runs/MULT/final/{lef,gds,lib} macro
+openlane add64.json --run-tag ADD 
+rsync -ax runs/ADD/final/{lef,gds,lib} macro
+openlane config.json --run-tag TOP -T openroad.stapostpnr

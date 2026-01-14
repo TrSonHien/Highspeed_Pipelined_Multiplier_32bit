@@ -1,0 +1,121 @@
+if {[file exists ~/openlane2/my_script/script_matt.tcl]} {
+    source ~/openlane2/my_script/script_matt.tcl
+}
+Reading timing models for corner max_ss_100C_1v60…
+Reading timing library for the 'max_ss_100C_1v60' corner at '/home/hien/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/33-openroad-detailedplacement/add3x64.odb'…
+Reading design constraints file at '/home/hien/openlane2/designs/fn_pj/pipeline-mult/add64.sdc'…
+[INFO] Setting RC values…
+[INFO] Configuring cts characterization…
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk
+[INFO] Running Clock Tree Synthesis…
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_2
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 64 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 64.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(13995, 28500), (85825, 360340)].
+[INFO CTS-0024]  Normalized sink region: [(1.02904, 2.09559), (6.31066, 26.4956)].
+[INFO CTS-0025]     Width:  5.2816.
+[INFO CTS-0026]     Height: 24.4000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 32
+    Sub-region size: 5.2816 X 12.2000
+[INFO CTS-0034]     Segment length (rounded): 6.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 16
+    Sub-region size: 2.6408 X 12.2000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 8
+    Sub-region size: 2.6408 X 6.1000
+[INFO CTS-0034]     Segment length (rounded): 3.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 64.
+[INFO CTS-0018]     Created 9 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 9 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:2, 7:1, 8:3, 10:1, 11:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 71
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 357.85 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 7
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 6352um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               278    1043.50
+  Tap cell                                423     529.26
+  Clock buffer                             10     142.64
+  Timing Repair Buffer                    271    1425.12
+  Inverter                                 24      90.09
+  Clock inverter                            6      60.06
+  Sequential cell                          64    1281.23
+  Multi-Input combinational cell          947    6742.72
+  Total                                  2023   11314.60
+Writing OpenROAD database to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.odb'…
+Writing netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.nl.v'…
+Writing powered netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.pnl.v'…
+Writing layout to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.def'…
+Writing timing constraints to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.sdc'…
+[INFO] Legalizing…
+Placement Analysis
+---------------------------------
+total displacement         67.6 u
+average displacement        0.0 u
+max displacement            4.1 u
+original HPWL           26583.3 u
+legalized HPWL          27605.4 u
+delta HPWL                    4 %
+
+[INFO DPL-0020] Mirrored 563 instances
+[INFO DPL-0021] HPWL before           27605.4 u
+[INFO DPL-0022] HPWL after            26606.4 u
+[INFO DPL-0023] HPWL delta               -3.6 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               278    1043.50
+  Tap cell                                423     529.26
+  Clock buffer                             10     142.64
+  Timing Repair Buffer                    271    1425.12
+  Inverter                                 24      90.09
+  Clock inverter                            6      60.06
+  Sequential cell                          64    1281.23
+  Multi-Input combinational cell          947    6742.72
+  Total                                  2023   11314.60
+Writing OpenROAD database to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.odb'…
+Writing netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.nl.v'…
+Writing powered netlist to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.pnl.v'…
+Writing layout to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.def'…
+Writing timing constraints to '/home/hien/openlane2/designs/fn_pj/pipeline-mult/runs/ADD/34-openroad-cts/add3x64.sdc'…
+%OL_CREATE_REPORT cts.rpt
+[INFO CTS-0003] Total number of Clock Roots: 1.
+[INFO CTS-0004] Total number of Buffers Inserted: 9.
+[INFO CTS-0005] Total number of Clock Subnets: 9.
+[INFO CTS-0006] Total number of Sinks: 64.
+%OL_END_REPORT

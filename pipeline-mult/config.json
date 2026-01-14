@@ -1,0 +1,86 @@
+{
+	"DESIGN_NAME": "pipelined_mult",
+	"VERILOG_FILES": ["dir::src/ba_pipelined.v"],
+	"VERILOG_DEFINES": ["MACRO"],
+	"CLOCK_PORT": "clk",
+	"CLOCK_PERIOD": 10.0,
+	"PNR_SDC_FILE": "dir::src/pnr.sdc",
+	"SIGNOFF_SDC_FILE": "dir::src/signoff.sdc",
+	"FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+	"//GRT_REPAIR_ANTENNAS": true,
+	"RUN_ANTENNA_REPAIR": true,
+	"GRT_ANTENNA_ITERS": 10,
+	"RUN_HEURISTIC_DIODE_INSERTION": true,
+	"//DIODE_INSERTION_STRATEGY": 3,
+	"//FP_CORE_UTIL": 60,
+	"//PL_RESIZER_ALLOW_SETUP_VIOS": true,
+	"//GRT_RESIZER_ALLOW_SETUP_VIOS": true,
+	"SYNTH_STRATEGY": "DELAY 2",
+	"MAX_FANOUT_CONSTRAINT": 6,
+	"DIE_AREA": [0, 0, 800, 650],
+	"FP_SIZING": "absolute",
+	"CTS_CLK_BUFFERS": ["sky130_fd_sc_hd__clkbuf_2", "sky130_fd_sc_hd__clkbuf_4", "sky130_fd_sc_hd__clkbuf_8", "sky130_fd_sc_hd__clkbuf_16"],
+	"MACROS": {
+		"mult_16x16": {
+			"instances": {
+				"i_hh": {
+					"location": [
+                        50,
+                        50
+                    ],
+                    "orientation": "N"
+				},
+				"i_hl": {
+					"location": [
+                        350,
+                        50
+                    ],
+                    "orientation": "N"
+				},
+				"i_lh": {
+					"location": [
+                        50,
+                        350
+                    ],
+                    "orientation": "N"
+				},
+				"i_ll": {
+					"location": [
+                        350,
+                        350
+                    ],
+                    "orientation": "N"
+				}
+			},
+            "gds": [
+                "dir::macro/gds/mult_16x16.gds"
+            ],
+            "lef": [
+                "dir::macro/lef/mult_16x16.lef"
+            ],
+            "lib": {
+                "*": "dir::macro/lib/max_ss_100C_1v60/mult_16x16__max_ss_100C_1v60.lib"
+            }
+		},
+		"add3x64": {
+			"instances": {
+				"i_add": {
+					"location": [
+                        650,
+                        50
+                    ],
+                    "orientation": "N"
+				}
+			},
+            "gds": [
+                "dir::macro/gds/add3x64.gds"
+            ],
+            "lef": [
+                "dir::macro/lef/add3x64.lef"
+            ],
+            "lib": {
+                "*": "dir::macro/lib/max_ss_100C_1v60/add3x64__max_ss_100C_1v60.lib"
+            }
+		}
+	}
+}
